@@ -1,0 +1,64 @@
+body {
+  text-align: center; }
+
+#book {
+  width: 1040px;
+  height: 720px;
+  autoCenter: true; }
+
+#book .page-wrapper {
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -ms-perspective: 2000px;
+  perspective: 2000px; }
+
+#book .shadow,
+#book.shadow {
+  -webkit-box-shadow: 0 20px 30px #666;
+  -moz-box-shadow: 0 20px 30px #666;
+  -ms-box-shadow: 0 20px 30px #666;
+  -o-box-shadow: 0 20px 30px #666;
+  box-shadow: 0 20px 30px #666; }
+
+#book .turn-page {
+  background-color: #ccc; }
+
+.page {
+  background: url(http://www.sawyoo.com/postpic/2011/10/white-lined-paper-template_385710.jpg);
+  background-size: contain; }
+
+.odd {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+.even {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+#front {
+  /*background: url(http://4.bp.blogspot.com/-gWz90XS15yA/UD5jrhV1hvI/AAAAAAAAEIw/2mgVcKyF-Yw/s1600/Copy+of+img026.jpg) no-repeat center center;*/
+  background: url(media/old-leather-book-cover-texture_322807.jpg) no-repeat center center;
+  background-size: cover;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+#back {
+  background: url(media/old-leather-back.jpg) no-repeat center center;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+#frontInner {
+  background: url(http://asukabook.com/images/products/cover-colors/large/lx-brown.jpg) repeat;
+  background-size: 10px 10px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+#backInner {
+  background: url(http://asukabook.com/images/products/cover-colors/large/lx-brown.jpg) repeat;
+  background-size: 10px 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px; }
+
+/*# sourceMappingURL=styles.css.map */
