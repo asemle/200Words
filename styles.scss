@@ -100,18 +100,26 @@ background-image: url(http://www.sawyoo.com/postpic/2011/10/white-lined-paper-te
   background: url(http://www.sawyoo.com/postpic/2011/10/white-lined-paper-template_385710.jpg);
   background-size: cover;
   height: 94vh;
+  span {
+    position: absolute;
+    bottom: 10px;;
+  }
 }
 
 
 
 .textInput {
+  padding: 10px;
+  // outline: 0;
+  border: 0;
   opacity: 1;
   display: block;
   background-color: rgba(0, 0, 0, 0);
   width: 100%;
-  height: 94.5vh;
-  font-size: 20px;
+  height: 95%;
+  font-size: 22px;;
   padding-top: 8vh;
+  line-height: 26px;
 }
 
 
