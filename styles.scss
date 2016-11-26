@@ -11,7 +11,7 @@ body {
 $gold: rgb(197,179,88);
 
 #book{
-    width: 98vw;
+    width: 1020px;
     height: 98vh;
   -webkit-transition:margin-left 0.5s ease-in-out;
   -moz-transition:margin-left 0.5s ease-in-out;
@@ -27,6 +27,7 @@ $gold: rgb(197,179,88);
   }
   box-sizing: border-box;
 }
+
 #book .gradient{
   background-size: cover;
   height: 94vh;
@@ -131,8 +132,8 @@ background-image: url(http://www.sawyoo.com/postpic/2011/10/white-lined-paper-te
   background-size: cover;
   text-align: right;
   img {
-    height: 94vh;
-    width: 48vw;
+    height: 96%;
+    width: 98%;
     margin-top: 15px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -167,8 +168,8 @@ background: url(media/old-leather-book-cover-texture_322807.jpg) no-repeat cente
     border-bottom-right-radius: 10px;
     text-align: left;
     img {
-      height: 94vh;
-      width: 46%;
+      height: 96%;
+      width: 98%;
       margin-top: 15px;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
