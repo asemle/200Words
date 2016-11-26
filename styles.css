@@ -1,16 +1,58 @@
+* {
+  box-sizing: border-box; }
+
 body {
-  text-align: center; }
+  text-align: center;
+  margin: 0;
+  padding: 10px; }
 
 #book {
-  width: 1040px;
-  height: 720px;
-  autoCenter: true; }
+  width: 98vw;
+  height: 98vh;
+  -webkit-transition: margin-left 0.5s ease-in-out;
+  -moz-transition: margin-left 0.5s ease-in-out;
+  -o-transition: margin-left 0.5s ease-in-out;
+  -ms-transition: margin-left 0.5s ease-in-out;
+  transition: margin-left 0.5s ease-in-out;
+  box-sizing: border-box; }
+  #book h1 {
+    margin-top: 230px;
+    font-family: 'Journal';
+    font-size: 90px;
+    color: #c5b358;
+    opacity: 0.5; }
 
+#book .gradient {
+  background-size: cover;
+  height: 94vh;
+  background-image: url(http://www.sawyoo.com/postpic/2011/10/white-lined-paper-template_385710.jpg); }
+  #book .gradient:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, right top, left top, color-stop(0.95, transparent), color-stop(1, rgba(0, 0, 0, 0.15)));
+    background-image: -webkit-linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -moz-linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -ms-linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -o-linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%); }
+
+@font-face {
+  font-family: 'aquilinetworegular';
+  src: url("./media/AquilineTwo-webfont.eot");
+  src: url("./media/AquilineTwo-webfont.eot?#iefix") format("embedded-opentype"), url("./media/AquilineTwo-webfont.woff") format("woff"), url("./media/AquilineTwo-webfont.ttf") format("truetype"), url("./media/AquilineTwo-webfont.svg#aquilinetworegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 #book .page-wrapper {
   -webkit-perspective: 2000px;
   -moz-perspective: 2000px;
   -ms-perspective: 2000px;
-  perspective: 2000px; }
+  -o-perspective: 2000px;
+  perspective: 2000px;
+  box-sizing: border-box; }
 
 #book .shadow,
 #book.shadow {
@@ -18,14 +60,25 @@ body {
   -moz-box-shadow: 0 20px 30px #666;
   -ms-box-shadow: 0 20px 30px #666;
   -o-box-shadow: 0 20px 30px #666;
-  box-shadow: 0 20px 30px #666; }
+  box-shadow: 0 20px 30px #666;
+  box-sizing: border-box; }
 
 #book .turn-page {
   background-color: #ccc; }
 
 .page {
   background: url(http://www.sawyoo.com/postpic/2011/10/white-lined-paper-template_385710.jpg);
-  background-size: contain; }
+  background-size: cover;
+  height: 94vh; }
+
+.textInput {
+  opacity: 1;
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  height: 94.5vh;
+  font-size: 20px;
+  padding-top: 8vh; }
 
 .odd {
   border-top-right-radius: 10px;
@@ -35,30 +88,38 @@ body {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px; }
 
+#frontInner {
+  background: url(media/distressed-leather-texture.jpg) no-repeat;
+  background-size: cover;
+  text-align: right; }
+  #frontInner img {
+    height: 94vh;
+    width: 48vw;
+    margin-top: 15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; }
+
 #front {
   /*background: url(http://4.bp.blogspot.com/-gWz90XS15yA/UD5jrhV1hvI/AAAAAAAAEIw/2mgVcKyF-Yw/s1600/Copy+of+img026.jpg) no-repeat center center;*/
   background: url(media/old-leather-book-cover-texture_322807.jpg) no-repeat center center;
-  background-size: cover;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px; }
+  background-size: cover; }
 
 #back {
   background: url(media/old-leather-back.jpg) no-repeat center center;
-  background-size: cover;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px; }
-
-#frontInner {
-  background: url(http://asukabook.com/images/products/cover-colors/large/lx-brown.jpg) repeat;
-  background-size: 10px 10px;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px; }
+  background-size: cover; }
 
 #backInner {
-  background: url(http://asukabook.com/images/products/cover-colors/large/lx-brown.jpg) repeat;
-  background-size: 10px 10px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px; }
+  box-sizing: border-box;
+  background: url(media/distressed-leather-texture.jpg);
+  background-size: cover;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: left; }
+  #backInner img {
+    height: 94vh;
+    width: 48vw;
+    margin-top: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,4 +1,4 @@
-$('#book').turn({gradients: true, acceleration: true, autoCenter: true, elevation: 100});
+$('#book').turn({gradients: true, acceleration: true, autoCenter: true, elevation: 100, inclination: 20});
 // $(window).ready(function() {
 //   $('#book').turn({
 //     display: 'double',
