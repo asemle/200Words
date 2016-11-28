@@ -7,7 +7,7 @@ body {
   padding: 10px; }
 
 #book {
-  width: 1020px;
+  width: 130vh;
   height: 98vh;
   -webkit-transition: margin-left 0.5s ease-in-out;
   -moz-transition: margin-left 0.5s ease-in-out;
@@ -22,11 +22,11 @@ body {
     color: #c5b358;
     opacity: 0.5; }
 
-#book .gradient {
+.rightGradient {
   background-size: cover;
   height: 94vh;
-  background-image: url(http://www.sawyoo.com/postpic/2011/10/white-lined-paper-template_385710.jpg); }
-  #book .gradient:before {
+  background-image: url(media/white-lined-paper.jpg); }
+  .rightGradient:before {
     content: '';
     position: absolute;
     top: 0;
@@ -39,6 +39,36 @@ body {
     background-image: -ms-linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
     background-image: -o-linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
     background-image: linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%); }
+  .rightGradient span {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: black;
+    font-weight: bold; }
+
+.leftGradient {
+  background-size: cover;
+  height: 94vh;
+  background-image: url(media/white-lined-paper.jpg); }
+  .leftGradient:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0.95, transparent), color-stop(1, rgba(0, 0, 0, 0.15)));
+    background-image: -webkit-linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -moz-linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -ms-linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -o-linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%); }
+  .leftGradient span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: black;
+    font-weight: bold; }
 
 @font-face {
   font-family: 'aquilinetworegular';
@@ -66,14 +96,6 @@ body {
 #book .turn-page {
   background-color: #ccc; }
 
-.page {
-  background: url(http://www.sawyoo.com/postpic/2011/10/white-lined-paper-template_385710.jpg);
-  background-size: cover;
-  height: 94vh; }
-  .page span {
-    position: absolute;
-    bottom: 10px; }
-
 .textInput {
   padding: 10px;
   border: 0;
@@ -85,6 +107,38 @@ body {
   font-size: 22px;
   padding-top: 8vh;
   line-height: 26px; }
+
+#contents.odd {
+  background: #EFF0F5; }
+  #contents.odd:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, right top, left top, color-stop(0.95, transparent), color-stop(1, rgba(0, 0, 0, 0.15)));
+    background-image: -webkit-linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -moz-linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -ms-linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -o-linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%); }
+
+#contents.even {
+  background: #EFF0F5; }
+  #contents.even:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0.95, transparent), color-stop(1, rgba(0, 0, 0, 0.15)));
+    background-image: -webkit-linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -moz-linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -ms-linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -o-linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%); }
 
 .odd {
   border-top-right-radius: 10px;
@@ -106,7 +160,6 @@ body {
     border-bottom-left-radius: 10px; }
 
 #front {
-  /*background: url(http://4.bp.blogspot.com/-gWz90XS15yA/UD5jrhV1hvI/AAAAAAAAEIw/2mgVcKyF-Yw/s1600/Copy+of+img026.jpg) no-repeat center center;*/
   background: url(media/old-leather-book-cover-texture_322807.jpg) no-repeat center center;
   background-size: cover; }
 
