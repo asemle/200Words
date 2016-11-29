@@ -14,4 +14,16 @@ $(window).bind('keydown', function(e) {
     $('#book').turn('next');
 })
 
-$('#book')
+$(document).ready(function() {
+  //hide entry, hide button, hide date
+
+  //on keypress, textarea.val()
+  //if textarea.val().split(" ").length >= 200 {show submit button}
+
+  //submit button on click {
+  //
+  // entry.text = taextarea.val()
+  // hide textarea, show entry div
+  //get date, add date to upper right corner
+
+})

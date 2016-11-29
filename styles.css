@@ -16,9 +16,9 @@ body {
   transition: margin-left 0.5s ease-in-out;
   box-sizing: border-box; }
   #book h1 {
-    margin-top: 230px;
+    margin-top: 35%;
     font-family: 'Journal';
-    font-size: 90px;
+    font-size: 500%;
     color: #c5b358;
     opacity: 0.5; }
 
@@ -39,6 +39,12 @@ body {
     background-image: -ms-linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
     background-image: -o-linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
     background-image: linear-gradient(right, transparent 90%, rgba(0, 0, 0, 0.3) 100%); }
+  .rightGradient h5 {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    color: lightgrey;
+    font-size: 110%; }
   .rightGradient span {
     position: absolute;
     bottom: 10px;
@@ -63,6 +69,12 @@ body {
     background-image: -ms-linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
     background-image: -o-linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
     background-image: linear-gradient(left, transparent 90%, rgba(0, 0, 0, 0.3) 100%); }
+  .leftGradient h5 {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    color: #B4B6C6;
+    font-size: 110%; }
   .leftGradient span {
     position: absolute;
     bottom: 10px;
@@ -71,11 +83,8 @@ body {
     font-weight: bold; }
 
 @font-face {
-  font-family: 'aquilinetworegular';
-  src: url("./media/AquilineTwo-webfont.eot");
-  src: url("./media/AquilineTwo-webfont.eot?#iefix") format("embedded-opentype"), url("./media/AquilineTwo-webfont.woff") format("woff"), url("./media/AquilineTwo-webfont.ttf") format("truetype"), url("./media/AquilineTwo-webfont.svg#aquilinetworegular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: 'Journal';
+  src: url("media/JOURNAL.TTF"); }
 #book .page-wrapper {
   -webkit-perspective: 2000px;
   -moz-perspective: 2000px;
