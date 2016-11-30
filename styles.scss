@@ -142,10 +142,10 @@ $linepaper: #B4B6C6;
   background-color: rgba(0, 0, 0, 0);
   width: 100%;
   height: 89.674%;
-  font-size: 125%;
+  font-size: 130%;
   font-family:serif;
   padding-left: 8%;
-  line-height: 1.8;
+  line-height: 1.3;
   padding-top: 1.3%;
   padding-right: 1.3%;
   text-align: left;
@@ -168,6 +168,16 @@ $linepaper: #B4B6C6;
   padding-right: 1.3%;
   margin: 0;
   text-align: left;
+  animation: gild 2s 1;
+}
+
+@keyframes gild {
+  0% {
+    color: $gold;
+  }
+  100% {
+    color: black;
+  }
 }
 
 .save {

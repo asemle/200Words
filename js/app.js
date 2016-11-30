@@ -36,14 +36,13 @@ $(document).ready(function() {
     });
     $('.save').click(function() {
       var entryDate = new Date;
-      $('.entry').html($('.textInput').val().replace( /\r?\n/g, "<br> &nbsp;"));
-      $('.date').html(entryDate.getMonth() + '/' + entryDate.getDate() + '/' + entryDate.getFullYear());
-      $('.save').hide();
-      $('.date').show();
-      $('.textInput').hide();
-      $('.entry').show().animate({
-        color: 'rgb(197,179,88)'
-      });
+      var newEntry = $(this).siblings('.textInput').val().replace( /\r?\n/g, "<br> &nbsp;");
+      $(this).siblings('.date').html(entryDate.getMonth() + '/' + entryDate.getDate() + '/' + entryDate.getFullYear());
+      $(this).siblings('.save').hide();
+      $(this).siblings('.date').show();
+      $(this).siblings('.textInput').hide();
+      $(this).siblings('.entry').html(newEntry).show()
+      $(this).hide();
     })
 // .replace(/\n/g, '<br>')
 })
