@@ -15,8 +15,39 @@ $(window).bind('keydown', function(e) {
 })
 
 $(document).ready(function() {
-  //hide entry, hide button, hide date
+  $('.date').hide();
+  $('.entry').hide();
+  $('.save').hide();
 
+  $('.textInput').keyup(function() {
+      if($(this).val().split(" ").length >= 200) {
+        if($('.save').is(':hidden')) {
+        $('.save').show().animate({
+          fontSize: '250%'
+        }).animate({
+          fontSize: '200%'
+        })
+      }
+        // prop('disabled', false);
+      }
+      else {
+        $('.save').hide();
+      }
+    });
+    $('.save').click(function() {
+      var entryDate = new Date;
+      $('.entry').html($('.textInput').val().replace( /\r?\n/g, "<br> &nbsp;"));
+      $('.date').html(entryDate.getMonth() + '/' + entryDate.getDate() + '/' + entryDate.getFullYear());
+      $('.save').hide();
+      $('.date').show();
+      $('.textInput').hide();
+      $('.entry').show().animate({
+        color: 'rgb(197,179,88)'
+      });
+    })
+// .replace(/\n/g, '<br>')
+})
+  //hide entry, hide button, hide date h5
   //on keypress, textarea.val()
   //if textarea.val().split(" ").length >= 200 {show submit button}
 
@@ -24,6 +55,5 @@ $(document).ready(function() {
   //
   // entry.text = taextarea.val()
   // hide textarea, show entry div
+  //hide button
   //get date, add date to upper right corner
-
-})
