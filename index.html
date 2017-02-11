@@ -5,10 +5,7 @@
     <title></title>
   <link rel="stylesheet" href="./styles.css" media="screen" title="no title">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script
-    src="https://code.jquery.com/jquery-2.2.4.min.js"
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="./js/turn.js" charset="utf-8"></script>
   </head>
   <body>
@@ -16,11 +13,37 @@
         <div class="hard" id="front">
           <h1> 200 Words</h1>
         </div>
-        <div class="hard" id='frontInner'><img src="media/innercover.jpg" alt="" /></div>
+        <div class="hard" id='frontInner'>
+          <div class="endPaper">
+            <div class="buttons">
+              <div class="buttBox">
+                <div class="minus">
+                  <div><b>__</b></div>
+                  <div>_</div>
+                </div>
 
+                <span>previous</span>
+              </div>
+              <div class="buttBox">
+                <div class="plus">
+                  <div>+</div>
+                  <div>=</div>
+                </div>
+                <span>next</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="contents">
+          <ol>
+
+          </ol>
+        </div>
         <div id="contents"></div>
-        <div id="contents"></div>
-        <div class='rightGradient'>
+
+
+        <!-- <div class='rightGradient'>
           <h5 class="date"></h5>
           <textarea class="textInput" name="name" rows="8" cols="80" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></textarea>
           <p class="entry">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -33,7 +56,7 @@
           <textarea class="textInput" name="name" rows="8" cols="80"></textarea>
           <p class="entry"></p>
           <button type="button" class="save" name="button">save</button><span class="text">2</span>
-        </div>
+        </div> -->
         <!-- <div class='rightGradient'>
           <textarea class="textInput" name="name" rows="8" cols="80"></textarea>
           <span class="text">3</span>
@@ -44,12 +67,12 @@
           <span class="text">4</span>
         </div> -->
 
-        <div class="hard" id='backInner'><img src="media/innercover.jpg" alt="" /></div>
+        <div class="hard" id='backInner'><div class="endPaper"></div></div>
         <div class="hard" id='back'></div>
 
     </div>
 
-<script src="./js/app.js" charset="utf-8"></script>
+  <script src="./js/app.js" charset="utf-8"></script>
 
   </body>
 </html>
