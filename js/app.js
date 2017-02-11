@@ -33,7 +33,7 @@ var i = 1
     $(".tableOfContents").append("<li class='pageIndex'>New</li>");
   }
   else {
-    var entryPages = "<div class='rightGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' placeholder='...' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' style='display: none' class='save' name='button'>save</button><span class='text'>" + (i++) + "</span></div><div class='leftGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' placeholder='...' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' style='display: none' class='save' name='button'>save</button><span class='text'>"+ i++ +"</span></div>";
+    var entryPages = "<div class='rightGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' placeholder='...' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' style='display: none' class='save' name='button'>save</button><span class='text'>" + (i++) + "</span></div><div class='leftGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' style='display: none' class='save' name='button'>save</button><span class='text'>"+ i++ +"</span></div>";
     $(entryPages).insertBefore("#backInner");
     $(".tableOfContents").append("<li class='pageIndex'>New</li>");
   }
