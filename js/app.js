@@ -14,6 +14,8 @@ var i = 1
   for(var key in localStorage) {
     var dateString = key.split(" ");
     var dateof = dateString[1] + " " + dateString[2] + " " + dateString[3];
+    var pageIndex = "<li class='pageIndex'>" + dateof + "</li>";
+    $(".tableOfContents").append(pageIndex);
     if(i % 2 !== 0) {
       console.log()
 
@@ -26,12 +28,14 @@ var i = 1
     }
   }
   if(i % 2 === 0) {
-    var entryPage = "<div class='leftGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' name='name' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' class='save' style='display: none' name='button'>save</button><span class='text'>"+ (i++) +"</span></div>"
+    var entryPage = "<div class='leftGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' placeholder='...' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' class='save' style='display: none' name='button'>save</button><span class='text'>"+ (i++) +"</span></div>"
     $(entryPage).insertBefore("#backInner");
+    $(".tableOfContents").append("<li class='pageIndex'>New</li>");
   }
   else {
-    var entryPages = "<div class='rightGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' name='name' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' style='display: none' class='save' name='button'>save</button><span class='text'>" + (i++) + "</span></div><div class='leftGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' name='name' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' style='display: none' class='save' name='button'>save</button><span class='text'>"+ i++ +"</span></div>";
+    var entryPages = "<div class='rightGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' placeholder='...' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' style='display: none' class='save' name='button'>save</button><span class='text'>" + (i++) + "</span></div><div class='leftGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' placeholder='...' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' style='display: none' class='save' name='button'>save</button><span class='text'>"+ i++ +"</span></div>";
     $(entryPages).insertBefore("#backInner");
+    $(".tableOfContents").append("<li class='pageIndex'>New</li>");
   }
 }
 
@@ -106,6 +110,12 @@ $(window).bind('keydown', function(e) {
        // $("#book").turn("addPage", el2, 4);
        // $("#book").turn("addPage", el3, 5);
        console.log(localStorage)
+
+       })
+
+       $(document).on('click', '.pageIndex',function() {
+         var destination = $(this).index() + 5;
+         $("#book").turn("page", destination);
 
        })
 
