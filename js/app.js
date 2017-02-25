@@ -8,13 +8,15 @@
 //   });
 // });
 
-
 var i = 1
- var addpages = function() {
+ var addpages = function(poot) {
+
+
   for(var key in localStorage) {
     var dateString = key.split(" ");
     var dateof = dateString[1] + " " + dateString[2] + " " + dateString[3];
     var pageIndex = "<li class='pageIndex'>" + dateof + "</li>";
+
     $(".tableOfContents").append(pageIndex);
     if(i % 2 !== 0) {
       console.log()
@@ -28,17 +30,20 @@ var i = 1
     }
   }
   if(i % 2 === 0) {
-    var entryPage = "<div class='leftGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' placeholder='...' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' class='save' style='display: none' name='button'>save</button><span class='text'>"+ (i++) +"</span></div>"
-    $(entryPage).insertBefore("#backInner");
-    $(".tableOfContents").append("<li class='pageIndex'>New</li>");
+      var entryPage = "<div class='leftGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' placeholder='"+ poot + "'rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' class='save' style='display: none' name='button'>save</button><span class='text'>"+ (i++) +"</span></div>"
+      $(entryPage).insertBefore("#backInner");
+      $(".tableOfContents").append("<li class='pageIndex'>New</li>");
   }
   else {
-    var entryPages = "<div class='rightGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' placeholder='...' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' style='display: none' class='save' name='button'>save</button><span class='text'>" + (i++) + "</span></div><div class='leftGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' style='display: none' class='save' name='button'>save</button><span class='text'>"+ i++ +"</span></div>";
-    $(entryPages).insertBefore("#backInner");
-    $(".tableOfContents").append("<li class='pageIndex'>New</li>");
+    console.log(poot)
+
+      var entryPages = "<div class='rightGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' placeholder='"+ poot +"' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' style='display: none' class='save' name='button'>save</button><span class='text'>" + (i++) + "</span></div>"+"<div class='leftGradient'><h5 class='date' style='display: none'></h5><textarea class='textInput' rows='8' cols='80'></textarea><p class='entry' style='display: none'></p><button type='button' style='display: none' class='save' name='button'>save</button><span class='text'>"+ i++ +"</span></div>";
+      $(entryPages).insertBefore("#backInner");
+      $(".tableOfContents").append("<li class='pageIndex'>New</li>");
+
+
   }
 }
-
 
 // <div class='rightGradient'>
 //   <h5 class="date"></h5>
@@ -67,12 +72,16 @@ $(window).bind('keydown', function(e) {
 
 
   // addpages()
-  $.when(addpages()).done(function() {
+
+  $.get("https://ineedaprompt.com/dictionary/default/prompt?q=adj+noun+adv+verb+noun+location", function(response) {
+    var poot = response.english;
+
+  $.when(addpages(poot)).done(function() {
     $('#book').turn({gradients: true, acceleration: true, autoCenter: true, elevation: 100, inclination: 20});
+  })
   })
 
   $(document).on('keyup', '.textInput', function() {
-     console.log("fufu")
        if($(this).val().split(" ").length >= 200) {
          console.log(this)
          if($(this).siblings('.save').is(':hidden')) {
